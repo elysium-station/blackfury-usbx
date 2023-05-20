@@ -1,4 +1,4 @@
 all:
-	docker build --tag fanfury/fanfury:localnetnode .
+	docker build --tag fanfury/fanfury:localfurynode .
 
 .PHONY: all
