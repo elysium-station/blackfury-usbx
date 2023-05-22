@@ -560,7 +560,7 @@ localnet-show-logstream:
 bridging-localnet-start: bridging-localnet-stop build-linux localnet-build
 	sudo mkdir -p $(BUILD_BRIDGING_DIR) && sudo cp -r $(BUILDDIR)/$(BLACKFURY_BINARY) $(BUILD_BRIDGING_DIR)/
 	@if ! [ -f $(BUILD_BRIDGING_DIR)/node0/blackfuryd/config/genesis.json ]; \
-	then docker run --rm -v $(BUILD_BRIDGING_DIR):/blackfury:Z fanfury/fanfury:localfurynode testnet init-files -v 4 -o /blackfury --starting-ip-address 192.168.11.2 --predetermined-mnemonic --keyring-backend=test; \
+	then docker run --rm -v $(BUILD_BRIDGING_DIR):/blackfury:Z fanfury/fanfury:localfurynode testnet init-files -v 4 -o /blackfury --starting-ip-address 192.168.11.2 --chain-id clockend_4200-101 --predetermined-mnemonic --keyring-backend=test; \
 	fi
 	docker-compose -f docker-compose-bridging.yml up -d
 
