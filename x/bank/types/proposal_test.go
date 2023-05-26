@@ -11,7 +11,7 @@ import (
 
 func Test_validateIBC(t *testing.T) {
 	meta := banktypes.Metadata{
-		Base: blacktypes.MicroFUSDDenom,
+		Base: blacktypes.MicroUSBXDenom,
 	}
 
 	err := validateIBC(meta)
